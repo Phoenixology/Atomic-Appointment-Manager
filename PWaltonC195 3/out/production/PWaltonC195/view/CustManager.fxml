@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustManager">
+    <children>
+        <Label layoutX="57.0" layoutY="40.0" prefHeight="39.0" prefWidth="203.0" text="CUSTOMER RECORDS" textFill="#2f14b9">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="addCust" layoutX="41.0" layoutY="421.0" mnemonicParsing="false" onAction="#addC" text="ADD" textFill="#0aab42" />
+        <TextField fx:id="nameCRecord" layoutX="136.0" layoutY="143.0" />
+        <TextField fx:id="addCRecord" layoutX="136.0" layoutY="196.0" />
+        <TextField fx:id="zipCRecord" layoutX="136.0" layoutY="308.0" />
+        <Label layoutX="44.0" layoutY="148.0" text="NAME" />
+        <Label layoutX="41.0" layoutY="201.0" text="ADDRESS" />
+        <Label layoutX="40.0" layoutY="364.0" prefHeight="17.0" prefWidth="46.0" text="PHONE" />
+        <Label layoutX="48.0" layoutY="258.0" text="CITY" />
+        <Button fx:id="upD" layoutX="136.0" layoutY="421.0" mnemonicParsing="false" onAction="#uPDate" text="UPDATE" textFill="#2f7530" />
+        <Button fx:id="exitCR" layoutX="791.0" layoutY="477.0" mnemonicParsing="false" onAction="#exitCust" text="EXIT" textFill="#e1085b" />
+        <TextField fx:id="phoneCRecord" layoutX="136.0" layoutY="359.0" />
+        <Label layoutX="35.0" layoutY="313.0" text="ZIPCODE" />
+      <Button fx:id="clear" layoutX="244.0" layoutY="477.0" mnemonicParsing="false" onAction="#clearB" text="CLEAR" textFill="#810dc9" />
+      <Button fx:id="deleteBCR" layoutX="38.0" layoutY="477.0" mnemonicParsing="false" onAction="#dCR" text="DELETE" textFill="#cd0f51" />
+      <TableView fx:id="custTable" layoutX="371.0" layoutY="145.0" prefHeight="242.0" prefWidth="467.0">
+        <columns>
+          <TableColumn fx:id="nameC" prefWidth="115.0" text="Name" />
+          <TableColumn fx:id="addC" prefWidth="97.0" text="Address" />
+            <TableColumn fx:id="zipC" minWidth="0.0" prefWidth="130.0" text="Zip" />
+            <TableColumn fx:id="phone" minWidth="0.0" prefWidth="124.0" text="Phone" />
+        </columns>
+      </TableView>
+      <Button fx:id="popCR" layoutX="217.0" layoutY="421.0" mnemonicParsing="false" onAction="#pop" text="POPULATE" textFill="#145cd0" />
+      <ComboBox fx:id="cityCRecord" layoutX="136.0" layoutY="253.0" prefHeight="27.0" prefWidth="167.0" />
+      <Label layoutX="225.0" layoutY="544.0" text="Relationships are the lifeblood of your business, nurture them often!" textFill="#0fb975">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+    </children>
+</AnchorPane>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="786.0" prefWidth="977.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ApptManager">
+    <children>
+        <Label layoutX="434.0" layoutY="27.0" text="ATOMIC APPOINTMENT MANAGER" textFill="#1d0dab">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="57.0" layoutY="190.0" text="Date" />
+        <Label layoutX="17.0" layoutY="234.0" />
+        <Label layoutX="17.0" layoutY="274.0" />
+        <Label layoutX="24.0" layoutY="274.0" />
+        <Button fx:id="cl" layoutX="214.0" layoutY="381.0" mnemonicParsing="false" onAction="#clear1" text="CLEAR" textFill="#d0990e" />
+        <Button fx:id="exitAAM" layoutX="861.0" layoutY="730.0" mnemonicParsing="false" onAction="#exitApptM" text="EXIT" textFill="#e40a0a" />
+        <Button fx:id="updatei" layoutX="111.0" layoutY="381.0" mnemonicParsing="false" onAction="#updateAppt" text="UPDATE" textFill="#0b8341" />
+        <Button fx:id="deleteAAM" layoutX="113.0" layoutY="498.0" mnemonicParsing="false" onAction="#deleteA" text="DELETE" textFill="#d0190f" />
+        <Label layoutX="20.0" layoutY="159.0" text=" " />
+        <Label layoutX="21.0" layoutY="159.0" />
+        <Label layoutX="56.0" layoutY="243.0" text="Start" />
+      <Button fx:id="addM" layoutX="228.0" layoutY="437.0" mnemonicParsing="false" onAction="#addAppt" text="ADD" textFill="#746dd7" />
+      <TableView fx:id="apptMCal" layoutX="300.0" layoutY="76.0" prefHeight="285.0" prefWidth="608.0">
+        <columns>
+            <TableColumn fx:id="uName" prefWidth="87.0" text="UserName" />
+            <TableColumn fx:id="cName" prefWidth="128.0" text="CustName" />
+            <TableColumn fx:id="datei" prefWidth="84.0" text="Date" />
+            <TableColumn fx:id="start" prefWidth="81.0" text="Start" />
+            <TableColumn fx:id="end" prefWidth="78.0" text="End" />
+            <TableColumn fx:id="type" prefWidth="149.0" text="Type" />
+        </columns>
+      </TableView>
+      <Button fx:id="MonthVB" layoutX="817.0" layoutY="381.0" mnemonicParsing="false" onAction="#MonthV" text="Month View" textFill="#0d2ed0" />
+      <Button fx:id="WeekVB" layoutX="643.0" layoutY="381.0" mnemonicParsing="false" onAction="#WeekV" text="Week View" textFill="#223ad7" />
+      <Label layoutX="39.0" layoutY="81.0" text="UserName" />
+      <Label layoutX="40.0" layoutY="134.0" text="CustName" />
+      <Label layoutX="59.0" layoutY="292.0" text="End" />
+      <Label layoutX="54.0" layoutY="339.0" text="Type" />
+      <DatePicker fx:id="date1" layoutX="111.0" layoutY="185.0" prefHeight="27.0" prefWidth="163.0" />
+      <Button fx:id="aView" layoutX="499.0" layoutY="381.0" mnemonicParsing="false" onAction="#viewAll" text="View All" textFill="#3b4bd9" />
+      <Button fx:id="popAAM" layoutX="111.0" layoutY="437.0" mnemonicParsing="false" onAction="#popUApppt" text="POPULATE" textFill="#6cd71a" />
+      <ComboBox fx:id="typeA" layoutX="111.0" layoutY="334.0" prefHeight="27.0" prefWidth="163.0" />
+      <ComboBox fx:id="endi" layoutX="111.0" layoutY="287.0" prefHeight="27.0" prefWidth="163.0" />
+      <ComboBox fx:id="starti" layoutX="111.0" layoutY="238.0" prefHeight="27.0" prefWidth="163.0" />
+      <ComboBox fx:id="custD" layoutX="111.0" layoutY="129.0" prefHeight="27.0" prefWidth="163.0" />
+      <ComboBox fx:id="userN" layoutX="111.0" layoutY="76.0" prefHeight="27.0" prefWidth="163.0" />
+      <Button fx:id="userSch" layoutX="472.0" layoutY="437.0" mnemonicParsing="false" onAction="#userSchedHandler" text="View Sched." textFill="#bc70b7" />
+      <ComboBox fx:id="schedCombo" layoutX="643.0" layoutY="437.0" prefWidth="150.0" promptText="     Consultant's" />
+      <Button layoutX="485.0" layoutY="730.0" mnemonicParsing="false" onAction="#typeReports" prefHeight="27.0" prefWidth="238.0" text="Presentation Reports Dynamic View" textFill="#9e0e6e" />
+      <TableView fx:id="weekTable" layoutX="301.0" layoutY="498.0" prefHeight="200.0" prefWidth="265.0">
+        <columns>
+          <TableColumn fx:id="wkAType" prefWidth="195.0" text="Week Appointment by Type" />
+          <TableColumn fx:id="totW" prefWidth="69.0" text="Total" />
+        </columns>
+      </TableView>
+      <TableView fx:id="monthTable" layoutX="643.0" layoutY="498.0" prefHeight="200.0" prefWidth="265.0">
+        <columns>
+          <TableColumn fx:id="mAType" prefWidth="200.0" text="Month Appointments by Type" />
+          <TableColumn fx:id="totM" prefWidth="64.0" text="Total" />
+        </columns>
+      </TableView>
+      <Label layoutX="54.0" layoutY="590.0" text="Who are you that's brilliant?" textFill="#601cc6">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+    </children>
+</AnchorPane>

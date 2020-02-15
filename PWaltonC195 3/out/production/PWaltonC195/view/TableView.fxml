@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="689.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TableView">
+   <children>
+      <Button fx:id="exitT" layoutX="617.0" layoutY="345.0" mnemonicParsing="false" onAction="#bCM" text="BACK" textFill="#ae2b06" />
+      <TableView fx:id="weekTbl" layoutX="351.0" layoutY="114.0" prefHeight="200.0" prefWidth="320.0">
+        <columns>
+          <TableColumn fx:id="presTypeW" prefWidth="193.0" text=" Week Presentation Type" />
+          <TableColumn fx:id="totW" prefWidth="126.0" text="Weekly Total" />
+        </columns>
+      </TableView>
+      <Label layoutX="154.0" layoutY="77.0" text="MONTH" textFill="#0884d7" />
+      <Label layoutX="476.0" layoutY="77.0" text="WEEK" textFill="#07b26e" />
+      <TableView fx:id="monthTbl" layoutX="14.0" layoutY="114.0" prefHeight="200.0" prefWidth="320.0">
+        <columns>
+          <TableColumn fx:id="presMType" prefWidth="196.0" text="Month Presentation Type" />
+          <TableColumn fx:id="totM" prefWidth="123.0" text="Monthly Total" />
+        </columns>
+      </TableView>
+      <Label layoutX="105.0" layoutY="349.0" text="Believe you can do it, feel you can do it, create a next step, now go do it!" textFill="#08945c">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+   </children>
+</AnchorPane>
